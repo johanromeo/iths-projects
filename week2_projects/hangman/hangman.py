@@ -31,7 +31,7 @@ print(f"""
 
 while player_points > 0 and player_guess != list(chosen_word):
   
-  guessed_letter = input("\nGuess a letter in the word -> ")
+  guessed_letter = input("\nGuess a letter in the word -> ").lower()
   
   if guessed_letter not in guessed_letters:
     guessed_letters.add(guessed_letter)
