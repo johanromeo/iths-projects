@@ -41,10 +41,14 @@ random.shuffle(shuffled_nums)
 for num in shuffled_nums:
   print(num, end=", ")
   
+  
+# Now it's showtime baby! Ask the player to guess which number came at what index in original_nums list
 print("Your task is pretty straight forward - enter the order of which the first numbers appeared!\n")
-     
-    
+      
+# The first index in original_nums list
 index_count = 0
+
+# Game loops until player guesses the correct order of nums in original_nums list
 while index_count < len(original_nums):
   player_guess = int(input(f"Which number appeared on index '{index_count}'?"))
   if player_guess == original_nums[index_count]:
