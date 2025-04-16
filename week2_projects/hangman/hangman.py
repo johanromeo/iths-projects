@@ -30,10 +30,12 @@ print(f"""
       """)
 
 while player_points > 0 and player_guess != list(chosen_word):
+  
   guessed_letter = input("\nGuess a letter in the word -> ")
   
   if guessed_letter not in guessed_letters:
     guessed_letters.add(guessed_letter)
+    
   else:
     print(f"\nYou've already guessed at {guessed_letter}!")
     continue
@@ -42,6 +44,7 @@ while player_points > 0 and player_guess != list(chosen_word):
     for i in range(0, len(chosen_word)):
       if guessed_letter == chosen_word[i]:
         player_guess[i] = guessed_letter
+        
     print(f"\nThe letter '{guessed_letter}' was in the word.")
     print(player_guess)
     
