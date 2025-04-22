@@ -12,16 +12,22 @@
 
 import random
 
+# List of words
 words = ["johan", "eiemi", "noel"]
+
+# Let the computer choose a random word from words list
 chosen_word = words[random.randrange(0, len(words))]
 
+# Setup for player
 player_guess = []
-guessed_letters = set()
+guessed_letters = set() # set to hold already guessed letters
 player_points = 5
 
+# Hide the chosen_word with underscores
 for word in chosen_word:
   player_guess += "_"
 
+# Welcome player
 print(f"""
       Welcome to Hangman!
       The word you have choosen contains {len(chosen_word)} letters.
@@ -29,6 +35,7 @@ print(f"""
       Or if you're lucky, guess the right word!
       """)
 
+# Game loops until player either guesses the right word or run out of points
 while player_points > 0 and player_guess != list(chosen_word):
   
   guessed_letter = input("\nGuess a letter in the word -> ").lower()
