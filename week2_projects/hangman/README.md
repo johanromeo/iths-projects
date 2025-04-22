@@ -11,7 +11,7 @@ This is a simple version of the classic Hangman game, written in Python.
 cd iths-projects\week2_projects\hangman
 ```
 
-3. **Open a terminal** and run the following command to start the game:
+3. **Run the following command to start the game:**
 
 ```powershell
 py hangman.py
