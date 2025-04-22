@@ -13,7 +13,7 @@
 import random
 
 # List of words
-words = ["johan", "eiemi", "noel"]
+words = ["banana", "cassius", "brutus", "gladius", "caesar", "orange"]
 
 # Let the computer choose a random word from words list
 chosen_word = words[random.randrange(0, len(words))]
@@ -57,6 +57,7 @@ while player_points > 0 and player_guess != list(chosen_word):
     
   else:
     player_points -= 1
-    print(f"\nYou have {player_points} points left.")
-    if player_points == 0:
-      print(f"\nSorry to see you go.\nThe chosen word was '{chosen_word}'\nTry again!")
+    print(f"\nThe letter {guessed_letter} was wrong!\nYou have {player_points} points left.")
+      
+# Tell good or bad news to player
+print("You won!" if player_points > 0 else "You lost!")
